@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <!-- 🏷️ Basic meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- 🏷️ Page title and styles -->
+  <title>Фільмова база</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🏰 Header section -->
+  <header>
+    <h1>🎬 Фільмова база</h1>
+    
+    <!-- 🔍 Search input -->
+    <input type="text" id="searchInput" placeholder="Пошук за назвою..." />
+    
+    <!-- 🛠️ Filter toggle button -->
+    <button id="filterToggle">🔍 Фільтри</button>
+  </header>
+
+  <!-- 🧰 Filter menu (hidden by default) -->
+  <div id="filterMenu" class="hidden">
+    <h2>🔧 Фільтри та сортування</h2>
+
+    <!-- 🔄 Sorting options -->
+    <section>
+      <h3>Сортування</h3>
+      <label><input type="radio" name="sort" value="name" /> A-Z</label>
+      <label><input type="radio" name="sort" value="rating" /> За рейтингом</label>
+      <label><input type="radio" name="sort" value="date" /> За датою</label>
+    </section>
+
+    <!-- 📅 Release date range filter -->
+    <section>
+      <h3>Дата релізу</h3>
+      <label>Від: <input type="date" id="releaseDateFrom" /></label>
+      <label>До: <input type="date" id="releaseDateTo" /></label>
+    </section>
+
+    <!-- 🏁 End date range filter -->
+    <section>
+      <h3>Дата завершення</h3>
+      <label>Від: <input type="date" id="endDateFrom" /></label>
+      <label>До: <input type="date" id="endDateTo" /></label>
+    </section>
+
+    <!-- 🎭 Genre filters -->
+    <section>
+      <h3>Жанри</h3>
+      <div id="genreFilters"></div>
+    </section>
+
+    <!-- 🌍 Language filters -->
+    <section>
+      <h3>Мови</h3>
+      <div id="languageFilters"></div>
+    </section>
+  </div>
+
+  <!-- 🎬 Main movie grid -->
+  <main id="movieContainer">
+    <!-- Картки фільмів (populated by JS) -->
+  </main>
+
+  <!-- 👣 Footer -->
+  <footer>
+    <p>© 2025 Фільмова база | Дані з TV Maze API</p>
+  </footer>
+
+  <!-- 📜 JavaScript -->
+  <script src="script.js" type="module"></script>
+</body>
+</html>
