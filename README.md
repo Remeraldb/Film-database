@@ -2,7 +2,7 @@
 Односторінковий застосунок для перегляду та фільтрації телешоу з TV Maze API. Дані завантажуються динамічно та відображаються у вигляді карток.
 
 ## Userflow діаграма
-![UserflowDiagram](.github/images/Screenshot 2025-05-09 131351.png)
+![UserflowDiagram](.github/images/UserflowDiagram.png)
 
 ## Можливості
 - Пошук телешоу за назвою
